@@ -1,0 +1,237 @@
+.catalog-tools {
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin:0 0 20px
+}
+.searchbox {
+  display:flex;
+  align-items:center;
+  gap:10px;
+  background:#f6f8f5;
+  border:1px solid #d6e0db;
+  border-radius:3px;
+  padding:0 13px;
+  height:44px;
+  flex:1;
+  min-width:170px
+}
+.searchbox>span {
+  font-size:22px;
+  color:#6b7b75
+}
+.searchbox input {
+  border:0;
+  background:transparent;
+  outline:0;
+  flex:1;
+  min-width:0;
+  font-size:11px;
+  color:var(--ink)
+}
+.searchbox kbd {
+  font:10px var(--mono);
+  color:#7a8984;
+  border:1px solid #d3dcd7;
+  border-radius:2px;
+  padding:3px 6px
+}
+.sortbox {
+  height:44px;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  padding:0 12px;
+  border:1px solid #d6e0db;
+  background:#f6f8f5;
+  border-radius:3px;
+  font:9px var(--mono);
+  text-transform:uppercase;
+  color:#677871
+}
+.sortbox select {
+  border:0;
+  background:transparent;
+  color:var(--ink);
+  font:10px var(--body);
+  outline:0
+}
+.compare-trigger {
+  height:44px;
+  border:1px solid var(--ink);
+  background:transparent;
+  border-radius:3px;
+  padding:0 14px;
+  font:9px var(--mono);
+  text-transform:uppercase;
+  letter-spacing:.06em
+}
+.compare-trigger span {
+  margin-left:8px;
+  color:#a4691e
+}
+.card[hidden] {
+  display:none!important
+}
+.card-media {
+  background-size:cover
+}
+.card-media img {
+  mix-blend-mode:multiply
+}
+.card-topline {
+  position:absolute;
+  left:13px;
+  top:13px;
+  z-index:2;
+  background:#f6f8f5d9;
+  backdrop-filter:blur(10px);
+  padding:7px 9px;
+  border:1px solid #ffffffa8;
+  font:8px var(--mono);
+  text-transform:uppercase;
+  letter-spacing:.08em
+}
+.compare-check {
+  position:absolute;
+  right:13px;
+  top:13px;
+  z-index:2;
+  display:flex;
+  gap:6px;
+  align-items:center;
+  background:#f6f8f5e8;
+  border:1px solid #ffffffa8;
+  padding:7px 9px;
+  font:8px var(--mono);
+  text-transform:uppercase
+}
+.compare-check input {
+  accent-color:#203940
+}
+.card-info {
+  min-height:75px
+}
+.card-cta {
+  white-space:nowrap
+}
+.compare-panel {
+  position:fixed;
+  z-index:18;
+  left:50%;
+  bottom:18px;
+  transform:translate(-50%,150%);
+  transition:transform .4s var(--ease);
+  width:min(850px,94vw);
+  background:#f6f8f5f2;
+  backdrop-filter:blur(22px);
+  border:1px solid #ffffff;
+  border-radius:5px;
+  padding:16px 18px;
+  box-shadow:0 20px 60px #14252b2a
+}
+.compare-panel.open {
+  transform:translate(-50%,0)
+}
+.compare-head {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:12px;
+  font:10px var(--mono);
+  text-transform:uppercase
+}
+.compare-items {
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:8px
+}
+.compare-item {
+  background:#e5ebe7;
+  padding:12px;
+  font-size:11px
+}
+.compare-item b {
+  display:block;
+  font:600 19px var(--display);
+  text-transform:uppercase;
+  margin-bottom:6px
+}
+.empty-state {
+  grid-column:1/-1;
+  padding:55px 20px;
+  text-align:center;
+  border:1px dashed #b9c7c0;
+  color:#65756f;
+  font-size:12px
+}
+.drawer-basket {
+  padding:14px 0;
+  display:grid;
+  grid-template-columns:1fr auto;
+  gap:3px 12px;
+  border-bottom:1px solid var(--line)
+}
+.drawer-basket strong {
+  font-size:12px
+}
+.drawer-basket small {
+  grid-column:1;
+  color:var(--muted);
+  font:9px var(--mono);
+  text-transform:uppercase
+}
+.quantity {
+  display:flex;
+  align-items:center;
+  gap:9px
+}
+.quantity button {
+  width:25px;
+  height:25px;
+  background:transparent;
+  border:1px solid var(--line);
+  border-radius:50%
+}
+.drawer .primary {
+  justify-content:center;
+  width:100%
+}
+.no-scroll {
+  overflow:hidden
+}
+.catalog-tools {
+  flex-wrap: wrap;
+}
+.searchbox {
+  flex-basis: 100%;
+}
+.sortbox, .compare-trigger {
+  flex: 1;
+  min-width: 0;
+}
+.card-media img {
+  max-width: 100%;
+}
+.card[hidden] {
+  display: none !important;
+}
+.empty-state {
+  grid-column: 1 / -1;
+}
+@media (min-width: 640px) {
+  .catalog-tools {
+    flex-wrap: wrap;
+  }
+  .sortbox, .compare-trigger {
+    flex: initial;
+  }
+}
+@media (min-width: 900px) {
+  .catalog-tools {
+    flex-wrap: nowrap;
+  }
+  .searchbox {
+    flex-basis: auto;
+  }
+}
